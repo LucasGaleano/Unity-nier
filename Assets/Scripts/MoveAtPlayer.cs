@@ -7,11 +7,14 @@ public class MoveAtPlayer : MonoBehaviour
 {
     private GameObject player;
     public float speed = 1f;
+    private CharacterController characterController;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
+        characterController = GetComponent<CharacterController>();
+
     }
 
     // Update is called once per frame
@@ -19,6 +22,8 @@ public class MoveAtPlayer : MonoBehaviour
     {
         Vector3 moveTo = (player.transform.position - transform.position).normalized;
         moveTo.y = 0;
-        transform.Translate(moveTo * speed * Time.deltaTime, Space.World);
+        //transform.Translate(moveTo * speed * Time.deltaTime, Space.World);
+        characterController.Move(moveTo * speed * Time.deltaTime);
+
     }
 }

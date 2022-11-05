@@ -40,13 +40,13 @@ public class GameManager : MonoBehaviour
     {
         int numberOfEnemies = random.Next(2, 4);
         int posZ = random.Next(2, 10);
-        int posX = random.Next(-10, 4);
+        int posX = 0;
         Instantiate(core, new Vector3(posX, core.transform.position.y, posZ), Quaternion.identity);
 
         for (int i = 0; i < numberOfEnemies; i++)
         {
             posZ = random.Next(2, 10);
-            posX = random.Next(-10, 2);
+            posX = random.Next(4, 10);
             GameObject newEnemy = choice(typeOfEnemies);
             Instantiate(newEnemy, new Vector3(posX, newEnemy.transform.position.y, posZ), Quaternion.identity);
             Instantiate(newEnemy, new Vector3(-posX, newEnemy.transform.position.y, posZ), Quaternion.identity);

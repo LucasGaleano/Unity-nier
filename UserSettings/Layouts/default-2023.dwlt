@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 123
+  controlID: 228
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 21
+  controlID: 124
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 53
+  controlID: 156
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -673,9 +673,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.5531222, y: 15.272327, z: -9.032477}
+    m_Target: {x: -7.843883, y: 1.4857074, z: 0.6186169}
     speed: 2
-    m_Value: {x: -1.5531222, y: 15.272327, z: -9.032477}
+    m_Value: {x: -7.843883, y: 1.4857074, z: 0.6186169}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -721,9 +721,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.51230675, y: -0.0038802235, z: 0.002280099, w: 0.85874385}
+    m_Target: {x: 0.04625849, y: 0.624929, z: -0.03719826, w: 0.77835506}
     speed: 2
-    m_Value: {x: 0.5123274, y: -0.00388038, z: 0.002280191, w: 0.8587785}
+    m_Value: {x: 0.046260886, y: 0.6249614, z: -0.037200186, w: 0.77839535}
   m_Size:
     m_Target: 0.026130373
     speed: 2
@@ -1299,9 +1299,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: bc790000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 3852fdffd452fdffc007feff7e0afeff0a0cfeffa60cfeff120dfeffae0dfeff746efeff106ffeff668efeff028ffeff8a8ffefff68ffeff9290feff8a92feff2693feffb293feff4e94feffda94feff7096feff0c97feffa897feff5898fefff498feff9099feff569afeff169cfeffd29cfeff789efefffca9feffa8aafeff54abfeff22fbffff68600000f8db0000
+      m_SelectedIDs: 14fbffff
+      m_LastClickedID: -1260
+      m_ExpandedIDs: 14fbffff22fbffffae620000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1366,7 +1366,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1375,16 +1375,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: D:\Unity My Projects\Nier
+  m_LastProjectPath: D:\Unity My Projects\Unity-nier
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3c610000
-    m_LastClickedID: 24892
-    m_ExpandedIDs: 000000002c61000000ca9a3b
+    m_SelectedIDs: 82640000
+    m_LastClickedID: 25730
+    m_ExpandedIDs: 000000007264000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1412,7 +1412,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002c610000
+    m_ExpandedIDs: 0000000072640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1443,18 +1443,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Level 2
-      m_OriginalName: Level 2
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 35032
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:

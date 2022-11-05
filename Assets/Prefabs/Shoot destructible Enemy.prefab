@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1944a2ec277463346adf2bc658ca3ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 20
 --- !u!114 &6586860893186437614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfc56c6a38f5fa46bd1059d0b09dea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 1
+  points: 1
   inmortal: 0
 --- !u!54 &-2668612010899384519
 Rigidbody:

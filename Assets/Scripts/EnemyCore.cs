@@ -12,11 +12,13 @@ public class EnemyCore : MonoBehaviour
     private float nextFireAllow;
     public float fireRate = 1f;
     private Array enemyCount;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
+        
     }
 
     // Update is called once per frame
