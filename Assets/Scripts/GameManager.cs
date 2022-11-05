@@ -12,16 +12,13 @@ public class GameManager : MonoBehaviour
     public Array enemyCount;
     public GameObject gameOverText;
     public GameObject playerCanvas;
-    public List<GameObject> enemies = new List<GameObject>();
+    public List<GameObject> typeOfEnemies = new List<GameObject>();
     public GameObject core;
-    private List<string> levels = new List<string>();
     private System.Random random = new System.Random();
     private bool levelEnd = false;
     // Start is called before the first frame update
     void Start()
     {
-        levels.Add("2");
-
     }
 
     // Update is called once per frame
@@ -43,14 +40,14 @@ public class GameManager : MonoBehaviour
     {
         int numberOfEnemies = random.Next(2, 4);
         int posZ = random.Next(2, 10);
-        int posX = random.Next(-10, 2);
+        int posX = random.Next(-10, 4);
         Instantiate(core, new Vector3(posX, core.transform.position.y, posZ), Quaternion.identity);
 
         for (int i = 0; i < numberOfEnemies; i++)
         {
             posZ = random.Next(2, 10);
             posX = random.Next(-10, 2);
-            GameObject newEnemy = choice(enemies);
+            GameObject newEnemy = choice(typeOfEnemies);
             Instantiate(newEnemy, new Vector3(posX, newEnemy.transform.position.y, posZ), Quaternion.identity);
             Instantiate(newEnemy, new Vector3(-posX, newEnemy.transform.position.y, posZ), Quaternion.identity);
         }
@@ -65,10 +62,7 @@ public class GameManager : MonoBehaviour
     {
 
         yield return new WaitForSeconds(3);
-
         NewRandomLevel();
-        //SceneManager.LoadScene("Level 2");
-        //levels.RemoveAt(0);
         gameOverText.SetActive(false);
         playerCanvas.SetActive(true);
         levelEnd = false;
