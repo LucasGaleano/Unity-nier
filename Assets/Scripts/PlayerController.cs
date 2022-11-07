@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using System.Transactions;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         MapInput();
         life = GetComponent<Life>();
-        playerLifeText = GameObject.Find("Player Life Text").GetComponent<TextMeshProUGUI>();
+        playerLifeText = playerCanvas.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
     }
 
     void Update()

@@ -30,15 +30,27 @@ public class GameManager : MonoBehaviour
         if (enemyCount.Length == 0 && !levelEnd)
         {
             gameOverText.SetActive(true);
+            StartCoroutine(WriteText("H[a]cked_"));
             playerCanvas.SetActive(false);
             levelEnd = true;
             StartCoroutine(NextLevel());
         }
     }
+
+    IEnumerator WriteText(string text)
+    {
+        string currentText = "";
+        for (int i = 0; i < text.Length+1; i++)
+        {
+            currentText = text.Substring(0, i);
+            gameOverText.GetComponent<TextMeshProUGUI>().SetText(currentText);
+            yield return new WaitForSeconds(0.1f); 
+        }
+    }
     
     void NewRandomLevel()
     {
-        int numberOfEnemies = random.Next(2, 4);
+        int numberOfEnemies = random.Next(1, 4);
         int posZ = random.Next(2, 10);
         int posX = 0;
         Instantiate(core, new Vector3(posX, core.transform.position.y, posZ), Quaternion.identity);
