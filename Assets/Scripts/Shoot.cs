@@ -25,7 +25,11 @@ public class Shoot : MonoBehaviour
             //Debug.Log("Collision: " + other.tag + " name:" + other.name + " With: " + tag + " name: " + name);
             Destroy(gameObject);
             Life otherLife = other.gameObject.GetComponent<Life>();
-            otherLife.recieveDamage(1);
+            if(otherLife != null)
+            {
+                otherLife.recieveDamage(1);
+            }
+
         }
     }
 }

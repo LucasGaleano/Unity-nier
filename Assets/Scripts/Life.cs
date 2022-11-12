@@ -12,7 +12,15 @@ public class Life : MonoBehaviour
     {
         if (points <= 0)
         {
-            Destroy(gameObject);
+            if (gameObject.CompareTag("Player"))
+            {
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            
         }
     }
 

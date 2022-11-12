@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Enemy Shield
   - Enemy Shoot
+  - Fire Point
   layers:
   - Default
   - TransparentFX

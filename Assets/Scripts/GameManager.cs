@@ -9,7 +9,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public Array enemyCount;
+    public GameObject[] enemyCount;
+    public GameObject[] playerCount;
     public GameObject gameOverText;
     public GameObject playerCanvas;
     public List<GameObject> typeOfEnemies = new List<GameObject>();
@@ -25,7 +26,16 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy");
-        
+        playerCount = GameObject.FindGameObjectsWithTag("Player");
+
+        if (playerCount.Length == 0 && !levelEnd)
+        {
+            gameOverText.SetActive(true);
+            StartCoroutine(WriteText("[R]ebooting system_"));
+            playerCanvas.SetActive(false);
+            levelEnd = true;
+            StartCoroutine(RestartGame());
+        }
 
         if (enemyCount.Length == 0 && !levelEnd)
         {
@@ -35,6 +45,8 @@ public class GameManager : MonoBehaviour
             levelEnd = true;
             StartCoroutine(NextLevel());
         }
+
+
     }
 
     IEnumerator WriteText(string text)
@@ -50,10 +62,17 @@ public class GameManager : MonoBehaviour
     
     void NewRandomLevel()
     {
+        foreach (GameObject enemy in enemyCount)
+        {
+            Destroy(enemy);
+        }
+
         int numberOfEnemies = random.Next(1, 4);
         int posZ = random.Next(2, 10);
         int posX = 0;
         Instantiate(core, new Vector3(posX, core.transform.position.y, posZ), Quaternion.identity);
+
+
 
         for (int i = 0; i < numberOfEnemies; i++)
         {
@@ -65,6 +84,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+
     GameObject choice(List<GameObject> list)
     {
         return list[random.Next(list.Count)];
@@ -75,9 +96,23 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(3);
         NewRandomLevel();
+        playerCount[0].transform.position = new Vector3(0, 0.5f, -9);
         gameOverText.SetActive(false);
         playerCanvas.SetActive(true);
         levelEnd = false;
+        
+
+
+
+    }
+
+    IEnumerator RestartGame()
+    {
+
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Level 1");
+        NewRandomLevel();
+        
 
     }
 

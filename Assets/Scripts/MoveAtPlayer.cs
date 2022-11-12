@@ -13,7 +13,7 @@ public class MoveAtPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.FindWithTag("Player");
         characterController = GetComponent<CharacterController>();
 
     }
@@ -21,11 +21,14 @@ public class MoveAtPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 moveTo = (player.transform.position - transform.position);
-        moveTo.y = 0;
-        //transform.Translate(moveTo * speed * Time.deltaTime, Space.World);
-        characterController.Move(moveTo.normalized * speed * Time.deltaTime);
-        transform.LookAt(new Vector3(player.transform.position.x,transform.position.y, player.transform.position.z),Vector3.up);
+        if (player != null)
+        {
+            Vector3 moveTo = (player.transform.position - transform.position);
+            moveTo.y = 0;
+            characterController.Move(moveTo.normalized * speed * Time.deltaTime);
+            transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z), Vector3.up);
+        }
+
 
     }
 }
